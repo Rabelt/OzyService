@@ -9,8 +9,8 @@ import javax.ws.rs.core.Response;
 public class HelloWorldService {
 
 	@GET
-	@Path("/{valor}")
-	public Response sayHello(@PathParam("valor") String msg) {
+	@Path("/{name}")
+	public Response sayHello(@PathParam("name") String msg) {
 		String output = "Hello, " + msg + "!";
 		return Response.status(200).entity(output).build();
 	}
